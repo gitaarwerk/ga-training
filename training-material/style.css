@@ -5,9 +5,7 @@ html, body {
     width: 100%;
 }
 
-html {
-    font-size: 66.7%;
-}
+html { font-size: 66.7%; }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -18,14 +16,11 @@ body {
     transition-delay: 0.3s;
 }
 
-
 @media (min-width: 640px) {
-    body {
-        background: linear-gradient(180deg, #64c3e5 0%,#a8e6ff 43%,#e5d2b7 68%,#d1bda9 70%);
-    }
+    body { background: linear-gradient(180deg, #64c3e5 0%,#a8e6ff 43%,#e5d2b7 68%,#d1bda9 70%); }
 }
 
-input, button, textarea { border: none; -webkit-appearance: none;}
+input, button, textarea { border: none; -webkit-appearance: none; }
 
 .title {
     font-size: 36px;
@@ -43,7 +38,6 @@ input, button, textarea { border: none; -webkit-appearance: none;}
     padding: 32px;
     transition: all 0.3s ease-in;
     transition-delay: 0.3s;
-
 }
 
 
@@ -51,13 +45,10 @@ input, button, textarea { border: none; -webkit-appearance: none;}
     .panel {
         border: 1px solid rgba(0,0,0, 0.3);
         box-shadow: 0 0 300px 0 rgba(250,150,10,0.9);
-
     }
 }
 
-.paragraph {
-    padding: 0 0 16px;
-}
+.paragraph { padding: 0 0 16px; }
 
 .cta-text {
     display: block;
