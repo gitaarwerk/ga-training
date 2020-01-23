@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jordy's magnificent GA-training document</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <link href="./style.css" type="text/css" rel="stylesheet"/>
+
+    <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            // Creates the Google Analytics property
+            window.ga('create', 'UA-90334419-10', 'auto', { 'siteSpeedSampleRate': 100 });
+    </script>
+</head>
+<body>
+<main>
+    <div class="panel">
+        <h1 class="title">Welcome</h1>
+        <form action="/" id="subscriptionForm" method="post">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consequat tellus vitae arcu consectetur faucibus. Curabitur finibus tristique lectus ut tristique. Nunc congue, tortor et iaculis eleifend, massa elit condimentum lectus, eget ornare leo ligula in risus. Ut auctor blandit urna, vel vestibulum libero elementum aliquam. Fusce iaculis ligula ligula, eget laoreet massa tristique vel. Donec fringilla turpis at nisl tincidunt, vitae ultrices sapien vehicula. Sed rutrum quam sem, quis tempor diam vehicula ut. Ut quis nulla eu tellus lacinia cursus id a est. Quisque turpis lectus, cursus quis magna ut, consectetur sagittis risus.
+
+            </p>
+            <p class="paragraph">Thanks for taking part of this work shop.</p>
+            <strong class="cta-text">Do you want to sign-up for more information?</strong>
+            <button id="submitButton" class="cta-button" type="submit">Yes, I would like to sign-up</button>
+        </form>
+    </div>
+</main>
+<script src='./helperscripts.js'></script>
+<script>
+    (function(){
+        const form = document.querySelector('#subscriptionForm');
+        const submitButton = document.querySelector('#submitButton');
+
+        const onViewportChange = () => {
+            if (window.innerWidth && window.innerHeight) {
+                console.log(`width: ${window.innerWidth}, height: ${window.innerHeight}`)
+            }
+        };
+
+        const updateViewPortVariable = !!window.debounce && window.debounce(
+            () => onViewportChange(),
+            500
+        );
+
+        // Detects viewport changes
+        window.addEventListener('resize',updateViewPortVariable);
+
+        // Prevent form from changing page
+        form.addEventListener('submit', event => {
+            event.preventDefault()
+        });
+
+        // Clicking the submit button
+        submitButton.addEventListener('click', event => {
+            alert('Thank you')
+        });
+
+        // Detects when document is ready
+        window.addEventListener('DOMContentLoaded', event => {
+            console.log('Window is done loading its content');
+            onViewportChange();
+        });
+    })()
+</script>
+<script>
+    window.ga('send', 'pageview');
+</script>
+</body>
+</html>

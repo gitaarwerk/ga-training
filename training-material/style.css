@@ -1,0 +1,96 @@
+*, *::before, *::after { box-sizing: border-box; padding: 0; margin: 0; }
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    font-size: 66.7%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, rgba(32, 1, 46, 1) 20%, rgba(195, 71, 1, 1) 100%);
+    line-height: 1.5;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in;
+    transition-delay: 0.3s;
+}
+
+
+@media (min-width: 640px) {
+    body {
+        background: linear-gradient(180deg, #64c3e5 0%,#a8e6ff 43%,#e5d2b7 68%,#d1bda9 70%);
+    }
+}
+
+input, button, textarea { border: none; -webkit-appearance: none;}
+
+.title {
+    font-size: 36px;
+    color: black;
+}
+
+.panel {
+    width: 50vh;
+    margin: 10vh auto;
+    border-radius: 8px;
+    border: 1px solid rgba(255,105,180, 0.5);
+    background: white;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.3);
+    min-height: 50vh;
+    padding: 32px;
+    transition: all 0.3s ease-in;
+    transition-delay: 0.3s;
+
+}
+
+
+@media (min-width: 640px) {
+    .panel {
+        border: 1px solid rgba(0,0,0, 0.3);
+        box-shadow: 0 0 300px 0 rgba(250,150,10,0.9);
+
+    }
+}
+
+.paragraph {
+    padding: 0 0 16px;
+}
+
+.cta-text {
+    display: block;
+    color: rebeccapurple;
+    font-size: 1.6rem;
+    line-height: 1.2;
+}
+
+.cta-button {
+    margin-top: 16px;
+    padding: 16px;
+    border-radius: 5px;
+    color: white;
+    background-color: hotpink;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    transition-delay: 0.1s;
+}
+
+.cta-button:hover {
+    background-color: rebeccapurple;
+}
+
+@media (min-width: 640px) {
+    .cta-text {
+        color: darkorange;
+    }
+
+    .cta-button {
+        background-color: orangered;
+    }
+
+    .cta-button:hover {
+        background-color: darkred;
+    }
+}
