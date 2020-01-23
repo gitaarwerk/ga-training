@@ -17,3 +17,11 @@ Resources:
   - [Session-level scope](https://support.google.com/analytics/answer/2709828?hl=en#example-session)
   - [User-level scope](https://support.google.com/analytics/answer/2709828?hl=en#example-user)
   - [Product-level scope](https://support.google.com/analytics/answer/2709828?hl=en#example-product)
+  
+  
+#### Plan for more advances topics
+- How to deal with multi linguality
+- Explore incoming data and cross-domain tracking
+- How to set-up cross-device tracking
+- GDPR and your data
+- Email campaign tracking
