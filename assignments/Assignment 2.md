@@ -17,6 +17,8 @@ Because they may not send any data, it is often not so obvious how often is inte
 
 Using events, we can track the user's intention and measure conversion. 
 
+**Documentation:** https://developers.google.com/analytics/devguides/collection/analyticsjs/events
+
 ## What you will learn 
 - Learn how powerful events are and why we need them
 - How to create an event
