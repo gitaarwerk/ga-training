@@ -5,7 +5,8 @@ html, body {
     width: 100%;
 }
 
-html { font-size: 66.7%; }
+html { font-size: 66.7%; overflow: hidden;
+}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -14,6 +15,7 @@ body {
     font-size: 1.2rem;
     transition: all 0.3s ease-in;
     transition-delay: 0.3s;
+    overflow-y: auto;
 }
 
 @media (min-width: 640px) {
@@ -28,21 +30,27 @@ input, button, textarea { border: none; -webkit-appearance: none; }
 }
 
 .panel {
-    width: 50vh;
-    margin: 10vh auto;
-    border-radius: 8px;
+    margin: 20px;
     border: 1px solid rgba(255,105,180, 0.5);
     background: white;
     box-shadow: 0 0 15px 0 rgba(0,0,0,0.3);
-    min-height: 50vh;
     padding: 32px;
     transition: all 0.3s ease-in;
     transition-delay: 0.3s;
+    min-height: calc(100vh - 40px);
+    height: 100%;
+    width: calc(100vw - 40px);
+    border-radius: 0;
 }
 
 
 @media (min-width: 640px) {
     .panel {
+        width: 70vh;
+        height: auto;
+        margin: 40px auto ;
+        min-height: unset;
+        border-radius: 8px;
         border: 1px solid rgba(0,0,0, 0.3);
         box-shadow: 0 0 300px 0 rgba(250,150,10,0.9);
     }
@@ -84,4 +92,50 @@ input, button, textarea { border: none; -webkit-appearance: none; }
     .cta-button:hover {
         background-color: darkred;
     }
+}
+
+/** Donation form **/
+.donation-section {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.donation-input {
+    display: inline-block;
+    background: white;
+    border: 1px solid rebeccapurple;
+    border-radius: 5px;
+    transition: all 0.3s ease-in;
+    transition-delay: 0.1s;
+    color: black;
+    padding: 8px;
+    margin-right: 8px;
+    width: 270px;
+    position: relative;
+}
+
+.donation-input::after {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    content: "$";
+    right: 3px;
+    top: 2px;
+}
+
+.donation-input:focus {
+    background: #a8e6ff;
+}
+
+.cta-button--secondary {
+    background: darkslateblue;
+    padding: 8px;
+    color: white;
+}
+
+.cta-button--secondary:hover {
+    background: mediumslateblue;
+    color: white;
 }

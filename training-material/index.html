@@ -33,15 +33,25 @@
             </p>
             <p class="paragraph">Thanks for taking part of this work shop.</p>
             <strong class="cta-text">Do you want to sign-up for more information?</strong>
-            <button id="submitButton" class="cta-button" type="submit">Yes, I would like to sign-up</button>
+            <button id="subscriptionSubmitButton" class="cta-button" type="submit">Yes, I would like to sign-up</button>
+            <hr class="rules"/>
+        </form>
+        <form action="/" id="donationForm" method="post">
+            <div class="donation-section">
+                <label>Donation: <input id="donationInput" type="text" placeholder="I would appreciate your donation" class="donation-input" /></label>
+                <button type="submit" id="donationSubmitButton" class="cta-button cta-button--secondary">Make a donation</button>
+            </div>
         </form>
     </div>
 </main>
 <script src='./helperscripts.js'></script>
 <script>
     (function(){
-        const form = document.querySelector('#subscriptionForm');
-        const submitButton = document.querySelector('#submitButton');
+        const subscriptionForm = document.querySelector('#subscriptionForm');
+        const donationForm = document.querySelector('#donationForm');
+        const subscriptionSubmitButton = document.querySelector('#subscriptionSubmitButton');
+        const donationSubmitButton = document.querySelector('#donationSubmitButton');
+        const donationInput = document.querySelector('#donationInput');
 
         const onViewportChange = () => {
             if (window.innerWidth && window.innerHeight) {
@@ -58,13 +68,20 @@
         window.addEventListener('resize',updateViewPortVariable);
 
         // Prevent form from changing page
-        form.addEventListener('submit', event => {
+        subscriptionForm.addEventListener('submit', event => {
+            event.preventDefault()
+        });
+        donationForm.addEventListener('submit', event => {
             event.preventDefault()
         });
 
         // Clicking the submit button
-        submitButton.addEventListener('click', event => {
+        subscriptionSubmitButton.addEventListener('click', event => {
             alert('Thank you')
+        });
+
+        donationSubmitButton.addEventListener('click', event => {
+            alert(`Thank you for your donation: ${donationInput.value}`)
         });
 
         // Detects when document is ready
