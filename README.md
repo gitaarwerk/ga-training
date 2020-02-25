@@ -17,7 +17,9 @@ Resources:
   - [Session-level scope](https://support.google.com/analytics/answer/2709828?hl=en#example-session)
   - [User-level scope](https://support.google.com/analytics/answer/2709828?hl=en#example-user)
   - [Product-level scope](https://support.google.com/analytics/answer/2709828?hl=en#example-product)
-  
+- [Data collecting limitations](https://support.google.com/analytics/answer/1070983?hl=en)  
+- [GA Campaign tracking](https://support.google.com/analytics/answer/1033863?hl=en)
+- [Handy campaign parameter generator](https://ga-dev-tools.appspot.com/campaign-url-builder/)
   
 #### Plan for more advances topics
 - How to deal with multi linguality
@@ -25,3 +27,4 @@ Resources:
 - How to set-up cross-device tracking
 - GDPR and your data
 - Email campaign tracking
+- 

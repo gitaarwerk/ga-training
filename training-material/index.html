@@ -17,7 +17,7 @@
                 a.async = 1;
                 a.src = g;
                 m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics_debug.js', 'ga');
 
             // Creates the Google Analytics property
             window.ga('create', 'UA-90334419-10', 'auto', { 'siteSpeedSampleRate': 100 });
@@ -92,7 +92,7 @@
     })()
 </script>
 <script>
-    window.ga('send', 'pageview');
+    window.ga('send', 'pageview', 'test jordy 💩');
 </script>
 </body>
 </html>
